@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_manager/screens/categories_meals_screen.dart';
 import 'package:recipe_manager/screens/categories_screen.dart';
+import 'package:recipe_manager/screens/meal_detail_screen.dart';
+import 'package:recipe_manager/screens/not_found_screen.dart';
 import 'package:recipe_manager/themes/main.dart';
 import 'package:recipe_manager/utils/consts/app_routes.dart';
 
@@ -18,6 +20,14 @@ class MyApp extends StatelessWidget {
       routes: {
         AppRoutes.home: (ctx) => CategoriesScreen(),
         AppRoutes.categoriesMeals: (ctx) => CategoriesMealsScreen(),
+        AppRoutes.meailDetail: (ctx) => MealDetailScreen(),
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (_) {
+            return NotFoundScreen();
+          },
+        );
       },
     );
   }
