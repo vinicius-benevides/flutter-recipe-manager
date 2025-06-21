@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_manager/components/main_drawer.dart';
 import 'package:recipe_manager/screens/categories_screen.dart';
 import 'package:recipe_manager/screens/favorite_screen.dart';
 
@@ -57,6 +58,7 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(_screens[_selectedScreenIndex].title)),
       body: _screens[_selectedScreenIndex].widget,
+      drawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) => _selectScreen(index),
         unselectedItemColor: Colors.white,
