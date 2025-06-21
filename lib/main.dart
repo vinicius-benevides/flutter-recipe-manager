@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_manager/screens/categories_meals_screen.dart';
-import 'package:recipe_manager/screens/categories_screen.dart';
 import 'package:recipe_manager/screens/meal_detail_screen.dart';
 import 'package:recipe_manager/screens/not_found_screen.dart';
+import 'package:recipe_manager/screens/tabs_screen.dart';
 import 'package:recipe_manager/themes/main.dart';
 import 'package:recipe_manager/utils/consts/app_routes.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: mainTheme(),
       routes: {
-        AppRoutes.home: (ctx) => CategoriesScreen(),
+        AppRoutes.home: (ctx) => TabsScreen(),
         AppRoutes.categoriesMeals: (ctx) => CategoriesMealsScreen(),
         AppRoutes.meailDetail: (ctx) => MealDetailScreen(),
       },
